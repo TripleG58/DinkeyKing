@@ -21,9 +21,19 @@
             background: url('images/Level1.png') 0 0 / contain no-repeat;
         }
         .player {
-            grid-row: 1 / 17 span;
+            grid-row: 1 / 16 span;
             grid-column: 1 / 16 span;
-            background: url('images/Player1.png') 0 0 / auto 100%;
+            background: url('images/Player1_1.png') 0 0 / auto 100%;
+            /*
+            7 sprites, so background-position in 7ths for animation:
+            background-position-x: 0%;
+            background-position-x: 14.2857%;
+            background-position-x: 28.5714%;
+            background-position-x: 42.8571%;
+            background-position-x: 57.1428%;
+            background-position-x: 71.4285%;
+            background-position-x: 85.7142%;
+            */
         }
 
     </style>
