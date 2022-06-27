@@ -25,6 +25,9 @@
             grid-column: 1 / 16 span;
             background: url('images/Player1_1.png') 0 0 / auto 100%;
         }
+        .player.right {
+            transform: scaleX(-1);
+        }
         @keyframes run {
             /* animation: run 0.2s steps(3, end) infinite; */
             from {background-position-x: 0%;}
@@ -36,7 +39,7 @@
 <body>
     <main>
         <div class="level"></div>
-        <div class="player"></div>
+        <div class="player right"></div>
     </main>
     <script>
 
