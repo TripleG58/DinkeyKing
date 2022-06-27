@@ -24,33 +24,11 @@
             grid-row: 1 / 16 span;
             grid-column: 1 / 16 span;
             background: url('images/Player1_1.png') 0 0 / auto 100%;
-            /*
-            7 sprites, so background-position in 7ths for animation:
-            !!! WRONG !!!
-            !!! NEED 6ths!!! - 100% is final image showing, so #sprites - 1 = total divisions
-            background-position-x: 0%;
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            X background-position-x: 14.2857%; X
-            X background-position-x: 28.5714%; X
-            X background-position-x: 42.8571%; X
-            X background-position-x: 57.1428%; X
-            X background-position-x: 71.4285%; X
-            X background-position-x: 85.7142%; X
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            CORRECT:
-            background-position-x: 0%; // neutral stance
-            background-position-x: 16.67%; // run 1
-            background-position-x: 33.33%; // run 2
-            background-position-x: 50%; // climb 1
-            background-position-x: 66.67%; // climb 2
-            background-position-x: 83.33%; // climb 3
-            background-position-x: 100%; // climb 4
-            */
-            animation: run 1s steps(6, end) infinite;
         }
         @keyframes run {
+            /* animation: run 0.2s steps(3, end) infinite; */
             from {background-position-x: 0%;}
-            to {background-position-x: 100%;}
+            to {background-position-x: 50%;}
         }
 
     </style>
