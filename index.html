@@ -32,9 +32,9 @@
             /* run 0.25s steps(1,start) infinite */
             0% {background-position-x: 0%;}
             25% {background-position-x: 16.7%;}
-            50% {background-position-x: 0%}
-            75% {background-position-x: 33%;}
-            100% {background-position-x: 0%}
+            50% {background-position-x: 0%;}
+            75% {background-position-x: 33.3%;}
+            100% {background-position-x: 0%;}
         }
 
     </style>
@@ -45,8 +45,74 @@
         <div class="player right"></div>
     </main>
     <script>
+        // GLOBAL HELPER FUNCTIONS //
+        function dqs(query) {return document.querySelector(query);}
+        function dqsa(query) {return document.querySelectorAll(query);}
+        function sleep(ms) {return new Promise(res=>{setTimeout(res,ms);});}
+    </script>
+    <script>
         // NOTE: player's hitbox will have to be slightly smaller than bounding box.
         // say, middle 14px... middle 12px? (of 16 for the bounding box)
+
+        class Game {
+            players;
+            enemies;
+            levels;
+            sounds;
+            items;
+            powerups;
+
+            constructor(props) {
+
+            }
+        }
+
+        class GameElement {
+            position; // {x, y}
+            width;
+            height;
+            constructor(props) {
+
+            }
+        }
+
+        class DynamicGameElement extends GameElement {
+            velocity; // {x, y}
+            moving;
+            constructor(props) {
+                super(props);
+            }
+        }
+        
+        class Player {
+            score;
+            lives;
+            direction;
+            jumping;
+            invincible;
+            powerup;
+            active;
+            
+            constructor(props) {
+
+            }
+        }
+
+        class Enemy {
+
+        }
+
+        class Item {
+            value;
+
+        }
+
+        class Powerup {
+            name;
+
+        }
+
+
     </script>
 </body>
 </html>
